@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Styles/jquery.signaturepad.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="~/Scripts/SignaturePad.js"></script>
+    <script src="~/Scripts/html2canvas.js"></script>
+    <script src="~/Scripts/bezier.js"></script>
+    <script src="~/Scripts/jquery.signaturepad.js"></script>
+    <script src="~/Scripts/json2.min.js"></script>
+    <script src="~/Scripts/numeric-1.2.6.min.js"></script>
+</head>
+<body>
+    <div>
+        <div class="sigPad" id="smoothed" style="width:510px;">
+            <h2>Signature Pad</h2>
+            <ul class="sigNav">
+                <li class="drawIt"><a href="#draw-it">Draw It</a></li>
+                <li class="clearButton"><a href="#clear">Clear</a></li>
+            </ul>
+
+            <div class="sig sigWrapper" id="appendpad" style="height:auto;">
+                <div class="typed"></div>
+                <div id="SignPad">
+                    <canvas class="pad" width="500" height="200"></canvas>
+                    <input type="hidden" name="output" class="output">
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="button" value="Save" id="btnSave">
+    <a href="#" id="DownloadImage">Download Image</a>
+</body>
+</html>
